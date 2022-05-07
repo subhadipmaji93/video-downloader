@@ -1,0 +1,23 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+  margin: auto;
+  width: 80%;
+  padding: 10px;
+}
+.container label {
+  font-size: 25px;
+}
+.container input {
+  font-size: 20px;
+}
+.link {
+  margin: auto;
+  width: 80%;
+  padding: 10px;
+}
+.link a {
+  display: block;
+  font-size: 2em;
+}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Youtube Downloader</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  {{{body}}}
+</body>
+<script>
+  var getData = () => {
+    var url = document.getElementById("url");
+    var download = document.getElementById("link");
+    fetch(`${window.location.href}dl/yt?url=${url.value}`)
+      .then((res) => res.json())
+      .then((data) => {
+        for (var v of data.resData) {
+
+          var linkData = document.createElement("li");
+          var a = document.createElement("a")
+          a.href = v.url;
+          a.innerText = `${v.ext} : ${v.res} : ${v.codec}`;
+          linkData.appendChild(a);
+          download.append(linkData);
+        }
+        download.hidden = false;
+      })
+  };
+</script>
+
+</html>
